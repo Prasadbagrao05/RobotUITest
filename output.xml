@@ -1,33 +1,58 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.3.2 (Python 3.13.7 on win32)" generated="2025-12-17T11:54:31.598178" rpa="false" schemaversion="5">
-<suite id="s1" name="12Mouseactions" source="c:\Automation workspace\Tests\Test Suit\RobotUITest\12mouseactions.robot">
-<test id="s1-t1" name="TC_Mouse Actions" line="5">
+<robot generator="Robot 7.3.2 (Python 3.13.7 on win32)" generated="2025-12-17T13:53:03.168160" rpa="false" schemaversion="5">
+<suite id="s1" name="13 Userkeywords" source="c:\Automation workspace\Tests\Test Suit\RobotUITest\13_Userkeywords.robot">
+<test id="s1-t1" name="TC_User defined Keywords" line="9">
+<kw name="LaunchBrowser">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2025-12-17T11:54:32.067380" level="INFO">Opening browser 'chrome' to base url 'https://swisnl.github.io/jQuery-contextMenu/demo.html'.</msg>
-<msg time="2025-12-17T11:54:33.371686" level="WARN">The chromedriver version (142.0.7444.3) detected in PATH at C:\Users\AD06441\AppData\Local\Programs\Python\Python313\Scripts\chromedriver.exe might not be compatible with the detected chrome version (143.0.7499.110); currently, chromedriver 143.0.7499.146 is recommended for chrome 143.*, so it is advised to delete the driver in PATH and retry</msg>
-<arg>https://swisnl.github.io/jQuery-contextMenu/demo.html</arg>
-<arg>chrome</arg>
+<msg time="2025-12-17T13:53:03.355676" level="INFO">Opening browser 'chrome' to base url 'https://testautomationpractice.blogspot.com/'.</msg>
+<msg time="2025-12-17T13:53:04.755006" level="WARN">The chromedriver version (142.0.7444.3) detected in PATH at C:\Users\AD06441\AppData\Local\Programs\Python\Python313\Scripts\chromedriver.exe might not be compatible with the detected chrome version (143.0.7499.110); currently, chromedriver 143.0.7499.146 is recommended for chrome 143.*, so it is advised to delete the driver in PATH and retry</msg>
+<arg>${url}</arg>
+<arg>${appbrowser}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2025-12-17T11:54:32.066323" elapsed="3.457609"/>
+<status status="PASS" start="2025-12-17T13:53:03.355420" elapsed="5.866621"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2025-12-17T11:54:35.524714" elapsed="0.040472"/>
+<status status="PASS" start="2025-12-17T13:53:09.222480" elapsed="0.038847"/>
 </kw>
-<kw name="Open Context Menu" owner="SeleniumLibrary">
-<arg>xpath://span[@class='context-menu-one btn btn-neutral']</arg>
-<doc>Opens the context menu on the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-12-17T11:54:35.565791" elapsed="0.289856"/>
+<kw name="Get Title" owner="SeleniumLibrary">
+<msg time="2025-12-17T13:53:09.281500" level="INFO">${title} = Automation Testing Practice</msg>
+<var>${title}</var>
+<doc>Returns the title of the current page.</doc>
+<status status="PASS" start="2025-12-17T13:53:09.261913" elapsed="0.019910"/>
 </kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2025-12-17T11:54:37.857337" level="INFO">Slept 2 seconds.</msg>
-<arg>2</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-12-17T11:54:35.856489" elapsed="2.001501"/>
+<return>
+<value>${title}</value>
+<status status="PASS" start="2025-12-17T13:53:09.282061" elapsed="0.000260"/>
+</return>
+<msg time="2025-12-17T13:53:09.282858" level="INFO">${pagetitle} = Automation Testing Practice</msg>
+<var>${pagetitle}</var>
+<arg>${appurl}</arg>
+<arg>${browser}</arg>
+<status status="PASS" start="2025-12-17T13:53:03.354775" elapsed="5.928342"/>
 </kw>
-<status status="PASS" start="2025-12-17T11:54:32.064837" elapsed="5.794860"/>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${pagetitle}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-12-17T13:53:09.284054" elapsed="0.000623"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-12-17T13:53:09.286273" level="INFO">Typing text 'Prasad' into text field 'xpath://input[@id='name']'.</msg>
+<arg>xpath://input[@id='name']</arg>
+<arg>Prasad</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-12-17T13:53:09.285521" elapsed="0.136347"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-12-17T13:53:09.424062" level="INFO">Typing text 'Password' into text field 'xpath://input[@id='email']'.</msg>
+<arg>xpath://input[@id='email']</arg>
+<arg>Password</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-12-17T13:53:09.422904" elapsed="0.157478"/>
+</kw>
+<status status="PASS" start="2025-12-17T13:53:03.354033" elapsed="6.228282"/>
 </test>
-<status status="PASS" start="2025-12-17T11:54:31.606067" elapsed="6.258606"/>
+<status status="PASS" start="2025-12-17T13:53:03.174323" elapsed="6.410592"/>
 </suite>
 <statistics>
 <total>
@@ -36,10 +61,11 @@
 <tag>
 </tag>
 <suite>
-<stat name="12Mouseactions" id="s1" pass="1" fail="0" skip="0">12Mouseactions</stat>
+<stat name="13 Userkeywords" id="s1" pass="1" fail="0" skip="0">13 Userkeywords</stat>
 </suite>
 </statistics>
 <errors>
-<msg time="2025-12-17T11:54:33.371686" level="WARN">The chromedriver version (142.0.7444.3) detected in PATH at C:\Users\AD06441\AppData\Local\Programs\Python\Python313\Scripts\chromedriver.exe might not be compatible with the detected chrome version (143.0.7499.110); currently, chromedriver 143.0.7499.146 is recommended for chrome 143.*, so it is advised to delete the driver in PATH and retry</msg>
+<msg time="2025-12-17T13:53:03.144031" level="WARN">Error in file 'c:\Automation workspace\Tests\Test Suit\RobotUITest\13_Userkeywords.robot' on line 22: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.</msg>
+<msg time="2025-12-17T13:53:04.755006" level="WARN">The chromedriver version (142.0.7444.3) detected in PATH at C:\Users\AD06441\AppData\Local\Programs\Python\Python313\Scripts\chromedriver.exe might not be compatible with the detected chrome version (143.0.7499.110); currently, chromedriver 143.0.7499.146 is recommended for chrome 143.*, so it is advised to delete the driver in PATH and retry</msg>
 </errors>
 </robot>
