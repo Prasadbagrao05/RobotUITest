@@ -1,10 +1,9 @@
-<<<<<<< HEAD
+
 Testing Branch Mainstream
 Testing Branch Main
-=======
-<<<<<<< HEAD
+
 Testing Branch Mainstream
-=======
+
 Testing Branch Main
->>>>>>> main
->>>>>>> Feature1
+
+
