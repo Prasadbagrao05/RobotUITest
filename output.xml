@@ -1,58 +1,178 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.3.2 (Python 3.13.7 on win32)" generated="2025-12-22T14:40:00.785077" rpa="false" schemaversion="5">
+<robot generator="Robot 7.3.2 (Python 3.13.7 on win32)" generated="2025-12-24T11:52:47.179594" rpa="false" schemaversion="5">
 <suite id="s1" name="18 DataDriven Test1" source="c:\Automation workspace\Tests\Test Suit\RobotUITest\18_DataDriven Test1.robot">
 <kw name="open my browser" owner="18_login_resourses" type="SETUP">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2025-12-22T14:40:01.328325" level="INFO">Opening browser 'chrome' to base url 'https://admin-demo.nopcommerce.com/login?returnurl=%2Fadmin%2F'.</msg>
-<msg time="2025-12-22T14:40:01.496901" level="WARN">The chromedriver version (142.0.7444.3) detected in PATH at C:\Users\AD06441\AppData\Local\Programs\Python\Python313\Scripts\chromedriver.exe might not be compatible with the detected chrome version (143.0.7499.110); currently, chromedriver 143.0.7499.169 is recommended for chrome 143.*, so it is advised to delete the driver in PATH and retry</msg>
+<msg time="2025-12-24T11:52:47.624236" level="INFO">Opening browser 'chrome' to base url 'https://admin-demo.nopcommerce.com/login?returnurl=%2Fadmin%2F'.</msg>
+<msg time="2025-12-24T11:52:47.808544" level="WARN">The chromedriver version (142.0.7444.3) detected in PATH at C:\Users\AD06441\AppData\Local\Programs\Python\Python313\Scripts\chromedriver.exe might not be compatible with the detected chrome version (143.0.7499.147); currently, chromedriver 143.0.7499.169 is recommended for chrome 143.*, so it is advised to delete the driver in PATH and retry</msg>
 <arg>${url}</arg>
 <arg>${browser}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2025-12-22T14:40:01.327962" elapsed="10.932109"/>
+<status status="PASS" start="2025-12-24T11:52:47.623833" elapsed="2.711651"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2025-12-22T14:40:12.260579" elapsed="0.206391"/>
+<status status="PASS" start="2025-12-24T11:52:50.336337" elapsed="0.307634"/>
 </kw>
-<status status="PASS" start="2025-12-22T14:40:01.327159" elapsed="11.140129"/>
+<status status="PASS" start="2025-12-24T11:52:47.623035" elapsed="3.021515"/>
 </kw>
 <test id="s1-t1" name="Correct user and Empty Password" line="9">
-<kw name="PrintPdf@yz.com">
-<msg time="2025-12-22T14:40:12.470353" level="FAIL">No keyword with name 'PrintPdf@yz.com' found.</msg>
-<arg>${EMPTY}</arg>
-<status status="FAIL" start="2025-12-22T14:40:12.470116" elapsed="0.002552">No keyword with name 'PrintPdf@yz.com' found.</status>
+<kw name="Invalid login">
+<kw name="Enter username" owner="18_login_resourses">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-12-24T11:52:50.654123" level="INFO">Typing text 'PrintPdf@yz.com' into text field 'xpath://input[@id='Email']'.</msg>
+<arg>xpath://input[@id='Email']</arg>
+<arg>@{username1}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-12-24T11:52:50.653122" elapsed="0.379154"/>
 </kw>
-<status status="FAIL" start="2025-12-22T14:40:12.467471" elapsed="0.111482">No keyword with name 'PrintPdf@yz.com' found.</status>
+<arg>${username}</arg>
+<status status="PASS" start="2025-12-24T11:52:50.652318" elapsed="0.380714"/>
+</kw>
+<kw name="Enter Password" owner="18_login_resourses">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-12-24T11:52:51.037785" level="INFO">Typing text '' into text field 'xpath://input[@id='Password']'.</msg>
+<arg>xpath://input[@id='Password']</arg>
+<arg>@{password1}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-12-24T11:52:51.035906" elapsed="0.195686"/>
+</kw>
+<arg>${password}</arg>
+<status status="PASS" start="2025-12-24T11:52:51.034257" elapsed="0.198162"/>
+</kw>
+<kw name="click login" owner="18_login_resourses">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-12-24T11:52:51.238509" level="INFO">Clicking element 'xpath://button[normalize-space()='Log in']'.</msg>
+<arg>xpath://button[normalize-space()='Log in']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-12-24T11:52:51.237268" elapsed="0.452754"/>
+</kw>
+<status status="PASS" start="2025-12-24T11:52:51.233441" elapsed="0.457080"/>
+</kw>
+<kw name="Error Message should be visible" owner="18_login_resourses">
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2025-12-24T11:52:51.809081" level="INFO">Current page contains text 'Login was unsuccessful.'.</msg>
+<arg>Login was unsuccessful.</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2025-12-24T11:52:51.691786" elapsed="0.118291"/>
+</kw>
+<status status="PASS" start="2025-12-24T11:52:51.690971" elapsed="0.119528"/>
+</kw>
+<arg>PrintPdf@yz.com</arg>
+<arg>${EMPTY}</arg>
+<status status="PASS" start="2025-12-24T11:52:50.650169" elapsed="1.160594"/>
+</kw>
+<status status="PASS" start="2025-12-24T11:52:50.644909" elapsed="1.170339"/>
 </test>
 <test id="s1-t2" name="Correct user wrong password" line="10">
-<kw name="admin@yourstore.com">
-<msg time="2025-12-22T14:40:12.585369" level="FAIL">No keyword with name 'admin@yourstore.com' found.</msg>
-<arg>Prasad</arg>
-<status status="FAIL" start="2025-12-22T14:40:12.585165" elapsed="0.000399">No keyword with name 'admin@yourstore.com' found.</status>
+<kw name="Invalid login">
+<kw name="Enter username" owner="18_login_resourses">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-12-24T11:52:51.822832" level="INFO">Typing text 'admin@yourstore.com' into text field 'xpath://input[@id='Email']'.</msg>
+<arg>xpath://input[@id='Email']</arg>
+<arg>@{username1}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-12-24T11:52:51.821646" elapsed="0.184207"/>
 </kw>
-<status status="FAIL" start="2025-12-22T14:40:12.582437" elapsed="0.003878">No keyword with name 'admin@yourstore.com' found.</status>
+<arg>${username}</arg>
+<status status="PASS" start="2025-12-24T11:52:51.820137" elapsed="0.186316"/>
+</kw>
+<kw name="Enter Password" owner="18_login_resourses">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-12-24T11:52:52.008948" level="INFO">Typing text 'Prasad' into text field 'xpath://input[@id='Password']'.</msg>
+<arg>xpath://input[@id='Password']</arg>
+<arg>@{password1}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-12-24T11:52:52.008032" elapsed="0.137700"/>
+</kw>
+<arg>${password}</arg>
+<status status="PASS" start="2025-12-24T11:52:52.007003" elapsed="0.139437"/>
+</kw>
+<kw name="click login" owner="18_login_resourses">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-12-24T11:52:52.148259" level="INFO">Clicking element 'xpath://button[normalize-space()='Log in']'.</msg>
+<arg>xpath://button[normalize-space()='Log in']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-12-24T11:52:52.147665" elapsed="0.404221"/>
+</kw>
+<status status="PASS" start="2025-12-24T11:52:52.146902" elapsed="0.405352"/>
+</kw>
+<kw name="Error Message should be visible" owner="18_login_resourses">
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2025-12-24T11:52:52.615730" level="INFO">Current page contains text 'Login was unsuccessful.'.</msg>
+<arg>Login was unsuccessful.</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2025-12-24T11:52:52.553460" elapsed="0.062662"/>
+</kw>
+<status status="PASS" start="2025-12-24T11:52:52.552748" elapsed="0.063804"/>
+</kw>
+<arg>admin@yourstore.com</arg>
+<arg>Prasad</arg>
+<status status="PASS" start="2025-12-24T11:52:51.819098" elapsed="0.797814"/>
+</kw>
+<status status="PASS" start="2025-12-24T11:52:51.817444" elapsed="0.800455"/>
 </test>
 <test id="s1-t3" name="wrong user Correct password" line="11">
-<kw name="PrintPdf@yz.com">
-<msg time="2025-12-22T14:40:12.591326" level="FAIL">No keyword with name 'PrintPdf@yz.com' found.</msg>
-<arg>admin</arg>
-<status status="FAIL" start="2025-12-22T14:40:12.590733" elapsed="0.000859">No keyword with name 'PrintPdf@yz.com' found.</status>
+<kw name="Invalid login">
+<kw name="Enter username" owner="18_login_resourses">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-12-24T11:52:52.624435" level="INFO">Typing text 'PrintPdf@yz.com' into text field 'xpath://input[@id='Email']'.</msg>
+<arg>xpath://input[@id='Email']</arg>
+<arg>@{username1}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-12-24T11:52:52.623545" elapsed="0.183202"/>
 </kw>
-<status status="FAIL" start="2025-12-22T14:40:12.588144" elapsed="0.013636">No keyword with name 'PrintPdf@yz.com' found.</status>
+<arg>${username}</arg>
+<status status="PASS" start="2025-12-24T11:52:52.622374" elapsed="0.184801"/>
+</kw>
+<kw name="Enter Password" owner="18_login_resourses">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-12-24T11:52:52.809473" level="INFO">Typing text 'admin' into text field 'xpath://input[@id='Password']'.</msg>
+<arg>xpath://input[@id='Password']</arg>
+<arg>@{password1}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-12-24T11:52:52.808561" elapsed="0.132236"/>
+</kw>
+<arg>${password}</arg>
+<status status="PASS" start="2025-12-24T11:52:52.807580" elapsed="0.133836"/>
+</kw>
+<kw name="click login" owner="18_login_resourses">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-12-24T11:52:52.944222" level="INFO">Clicking element 'xpath://button[normalize-space()='Log in']'.</msg>
+<arg>xpath://button[normalize-space()='Log in']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-12-24T11:52:52.943369" elapsed="0.446393"/>
+</kw>
+<status status="PASS" start="2025-12-24T11:52:52.942195" elapsed="0.448283"/>
+</kw>
+<kw name="Error Message should be visible" owner="18_login_resourses">
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2025-12-24T11:52:53.485787" level="INFO">Current page contains text 'Login was unsuccessful.'.</msg>
+<arg>Login was unsuccessful.</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2025-12-24T11:52:53.393389" elapsed="0.093050"/>
+</kw>
+<status status="PASS" start="2025-12-24T11:52:53.392038" elapsed="0.094964"/>
+</kw>
+<arg>PrintPdf@yz.com</arg>
+<arg>admin</arg>
+<status status="PASS" start="2025-12-24T11:52:52.621157" elapsed="0.866376"/>
+</kw>
+<status status="PASS" start="2025-12-24T11:52:52.620013" elapsed="0.869893"/>
 </test>
-<status status="FAIL" start="2025-12-22T14:40:00.791924" elapsed="11.811820"/>
+<status status="PASS" start="2025-12-24T11:52:47.186350" elapsed="6.310615"/>
 </suite>
 <statistics>
 <total>
-<stat pass="0" fail="3" skip="0">All Tests</stat>
+<stat pass="3" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat name="18 DataDriven Test1" id="s1" pass="0" fail="3" skip="0">18 DataDriven Test1</stat>
+<stat name="18 DataDriven Test1" id="s1" pass="3" fail="0" skip="0">18 DataDriven Test1</stat>
 </suite>
 </statistics>
 <errors>
-<msg time="2025-12-22T14:40:01.496901" level="WARN">The chromedriver version (142.0.7444.3) detected in PATH at C:\Users\AD06441\AppData\Local\Programs\Python\Python313\Scripts\chromedriver.exe might not be compatible with the detected chrome version (143.0.7499.110); currently, chromedriver 143.0.7499.169 is recommended for chrome 143.*, so it is advised to delete the driver in PATH and retry</msg>
+<msg time="2025-12-24T11:52:47.808544" level="WARN">The chromedriver version (142.0.7444.3) detected in PATH at C:\Users\AD06441\AppData\Local\Programs\Python\Python313\Scripts\chromedriver.exe might not be compatible with the detected chrome version (143.0.7499.147); currently, chromedriver 143.0.7499.169 is recommended for chrome 143.*, so it is advised to delete the driver in PATH and retry</msg>
 </errors>
 </robot>

@@ -22,3 +22,12 @@ TC_Mouse
     Sleep    3
 
     
+TC_ Mouse over
+
+    Open Browser    https://testautomationpractice.blogspot.com/    chrome
+    Maximize Browser Window
+
+    Mouse Over    xpath://button[normalize-space()='Point Me']
+    Sleep    2
+    Click Element    xpath://a[normalize-space()='Mobiles']
+    Sleep    2

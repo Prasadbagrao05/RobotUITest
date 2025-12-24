@@ -2,7 +2,7 @@
 Library    SeleniumLibrary
 Resource   C:/Automation workspace/Tests/Test Suit/RobotUITest/Resources/18_login_resourses.robot
 Suite Setup    open my browser    ## this will help in opening the browser only once
-##Test Template    Invalid login
+Test Template    Invalid login
 
 
 *** Test Cases ***
