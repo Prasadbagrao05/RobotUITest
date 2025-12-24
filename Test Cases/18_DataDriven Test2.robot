@@ -6,6 +6,7 @@ Suite Setup    open my browser
 Test Template    Invalid login
 
 
+
 *** Test Cases ***
 Login Testcase with Excel using ${username} and ${password}
 
@@ -17,5 +18,5 @@ Invalid Login
     Enter username    ${username}
     Enter Password    ${password}
     click login
-    Dashboard should be visible
+    Error Message should be visible
 

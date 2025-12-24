@@ -1,181 +1,82 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.3.2 (Python 3.13.7 on win32)" generated="2025-12-24T13:35:39.745493" rpa="false" schemaversion="5">
-<suite id="s1" name="18 DataDriven Test2" source="c:\Automation workspace\Tests\Test Suit\RobotUITest\Test Cases\18_DataDriven Test2.robot">
-<kw name="open my browser" owner="18_login_resourses" type="SETUP">
-<kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2025-12-24T13:35:40.100287" level="INFO">Opening browser 'chrome' to base url 'https://admin-demo.nopcommerce.com/login?returnurl=%2Fadmin%2F'.</msg>
-<msg time="2025-12-24T13:35:40.383079" level="WARN">The chromedriver version (142.0.7444.3) detected in PATH at C:\Users\AD06441\AppData\Local\Programs\Python\Python313\Scripts\chromedriver.exe might not be compatible with the detected chrome version (143.0.7499.170); currently, chromedriver 143.0.7499.169 is recommended for chrome 143.*, so it is advised to delete the driver in PATH and retry</msg>
-<arg>${url}</arg>
-<arg>${browser}</arg>
-<doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2025-12-24T13:35:40.099944" elapsed="2.902491"/>
+<robot generator="Robot 7.3.2 (Python 3.13.7 on win32)" generated="2025-12-24T14:59:39.174975" rpa="false" schemaversion="5">
+<suite id="s1" name="21 SetupandTeardown" source="c:\Automation workspace\Tests\Test Suit\RobotUITest\Test Cases\21_SetupandTeardown.robot">
+<kw name="Log To Console" owner="BuiltIn" type="SETUP">
+<arg>opening browser</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-12-24T14:59:39.215813" elapsed="0.000455"/>
 </kw>
-<kw name="Maximize Browser Window" owner="SeleniumLibrary">
-<doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2025-12-24T13:35:43.003241" elapsed="0.345334"/>
+<test id="s1-t1" name="TC_1Prepaid Recharge" line="10">
+<kw name="Log To Console" owner="BuiltIn" type="SETUP">
+<arg>login to application</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-12-24T14:59:39.216859" elapsed="0.000365"/>
 </kw>
-<status status="PASS" start="2025-12-24T13:35:40.099199" elapsed="3.253182"/>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Recharge Prepaid done</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-12-24T14:59:39.217889" elapsed="0.000442"/>
 </kw>
-<test id="s1-t1" name="Login Testcase with Excel using admin@gmail.com and admi" line="10">
-<kw name="Invalid Login">
-<kw name="Enter username" owner="18_login_resourses">
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-12-24T13:35:43.371075" level="INFO">Typing text 'admin@gmail.com' into text field 'xpath://input[@id='Email']'.</msg>
-<arg>xpath://input[@id='Email']</arg>
-<arg>@{username1}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-12-24T13:35:43.369760" elapsed="0.319487"/>
+<kw name="Log To Console" owner="BuiltIn" type="TEARDOWN">
+<arg>logout from application</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-12-24T14:59:39.219150" elapsed="0.000328"/>
 </kw>
-<arg>${username}</arg>
-<status status="PASS" start="2025-12-24T13:35:43.368525" elapsed="0.321467"/>
-</kw>
-<kw name="Enter Password" owner="18_login_resourses">
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-12-24T13:35:43.693845" level="INFO">Typing text 'admi' into text field 'xpath://input[@id='Password']'.</msg>
-<arg>xpath://input[@id='Password']</arg>
-<arg>@{password1}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-12-24T13:35:43.692103" elapsed="0.154541"/>
-</kw>
-<arg>${password}</arg>
-<status status="PASS" start="2025-12-24T13:35:43.690637" elapsed="0.156804"/>
-</kw>
-<kw name="click login" owner="18_login_resourses">
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-12-24T13:35:43.850404" level="INFO">Clicking element 'xpath://button[normalize-space()='Log in']'.</msg>
-<arg>xpath://button[normalize-space()='Log in']</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-12-24T13:35:43.849500" elapsed="0.529108"/>
-</kw>
-<status status="PASS" start="2025-12-24T13:35:43.848228" elapsed="0.530885"/>
-</kw>
-<kw name="Dashboard should be visible" owner="18_login_resourses">
-<kw name="Page Should Contain" owner="SeleniumLibrary">
-<msg time="2025-12-24T13:35:44.589725" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-11.png"&gt;&lt;img src="selenium-screenshot-11.png" width="800px"&gt;&lt;/a&gt;</msg>
-<msg time="2025-12-24T13:35:44.590711" level="FAIL">Page should have contained text 'Dashboard' but did not.</msg>
-<arg>Dashboard</arg>
-<doc>Verifies that current page contains ``text``.</doc>
-<status status="FAIL" start="2025-12-24T13:35:44.382339" elapsed="0.269174">Page should have contained text 'Dashboard' but did not.</status>
-</kw>
-<status status="FAIL" start="2025-12-24T13:35:44.379643" elapsed="0.272819">Page should have contained text 'Dashboard' but did not.</status>
-</kw>
-<arg>username=admin@gmail.com</arg>
-<arg>password=admi</arg>
-<status status="FAIL" start="2025-12-24T13:35:43.366833" elapsed="1.292528">Page should have contained text 'Dashboard' but did not.</status>
-</kw>
-<status status="FAIL" start="2025-12-24T13:35:43.361462" elapsed="1.310255">Page should have contained text 'Dashboard' but did not.</status>
+<status status="PASS" start="2025-12-24T14:59:39.216463" elapsed="0.003503"/>
 </test>
-<test id="s1-t2" name="Login Testcase with Excel using ad@gmail.com and ad" line="10">
-<kw name="Invalid Login">
-<kw name="Enter username" owner="18_login_resourses">
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-12-24T13:35:44.776321" level="INFO">Typing text 'ad@gmail.com' into text field 'xpath://input[@id='Email']'.</msg>
-<arg>xpath://input[@id='Email']</arg>
-<arg>@{username1}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-12-24T13:35:44.775345" elapsed="0.170843"/>
+<test id="s1-t2" name="TC_2Postpaid Recharge" line="13">
+<kw name="Log To Console" owner="BuiltIn" type="SETUP">
+<arg>login to application</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-12-24T14:59:39.222710" elapsed="0.000464"/>
 </kw>
-<arg>${username}</arg>
-<status status="PASS" start="2025-12-24T13:35:44.773695" elapsed="0.173119"/>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Post Paid Recharge done</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-12-24T14:59:39.224029" elapsed="0.000652"/>
 </kw>
-<kw name="Enter Password" owner="18_login_resourses">
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-12-24T13:35:44.950012" level="INFO">Typing text 'ad' into text field 'xpath://input[@id='Password']'.</msg>
-<arg>xpath://input[@id='Password']</arg>
-<arg>@{password1}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-12-24T13:35:44.949068" elapsed="0.119750"/>
+<kw name="Log To Console" owner="BuiltIn" type="TEARDOWN">
+<arg>logout from application</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-12-24T14:59:39.225457" elapsed="0.000622"/>
 </kw>
-<arg>${password}</arg>
-<status status="PASS" start="2025-12-24T13:35:44.947639" elapsed="0.121863"/>
-</kw>
-<kw name="click login" owner="18_login_resourses">
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-12-24T13:35:45.080391" level="INFO">Clicking element 'xpath://button[normalize-space()='Log in']'.</msg>
-<arg>xpath://button[normalize-space()='Log in']</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-12-24T13:35:45.071371" elapsed="1.254164"/>
-</kw>
-<status status="PASS" start="2025-12-24T13:35:45.070286" elapsed="1.257529"/>
-</kw>
-<kw name="Dashboard should be visible" owner="18_login_resourses">
-<kw name="Page Should Contain" owner="SeleniumLibrary">
-<msg time="2025-12-24T13:35:46.559351" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-12.png"&gt;&lt;img src="selenium-screenshot-12.png" width="800px"&gt;&lt;/a&gt;</msg>
-<msg time="2025-12-24T13:35:46.560265" level="FAIL">Page should have contained text 'Dashboard' but did not.</msg>
-<arg>Dashboard</arg>
-<doc>Verifies that current page contains ``text``.</doc>
-<status status="FAIL" start="2025-12-24T13:35:46.329831" elapsed="0.247278">Page should have contained text 'Dashboard' but did not.</status>
-</kw>
-<status status="FAIL" start="2025-12-24T13:35:46.328767" elapsed="0.258572">Page should have contained text 'Dashboard' but did not.</status>
-</kw>
-<arg>username=ad@gmail.com</arg>
-<arg>password=ad</arg>
-<status status="FAIL" start="2025-12-24T13:35:44.754504" elapsed="1.833346">Page should have contained text 'Dashboard' but did not.</status>
-</kw>
-<status status="FAIL" start="2025-12-24T13:35:44.728893" elapsed="1.888466">Page should have contained text 'Dashboard' but did not.</status>
+<status status="PASS" start="2025-12-24T14:59:39.221922" elapsed="0.004649"/>
 </test>
-<test id="s1-t3" name="Login Testcase with Excel using ad123@gmail.com and 123pwd" line="10">
-<kw name="Invalid Login">
-<kw name="Enter username" owner="18_login_resourses">
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-12-24T13:35:46.845529" level="INFO">Typing text 'ad123@gmail.com' into text field 'xpath://input[@id='Email']'.</msg>
-<arg>xpath://input[@id='Email']</arg>
-<arg>@{username1}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-12-24T13:35:46.830395" elapsed="0.197309"/>
+<test id="s1-t3" name="TC3_tEST3" line="16">
+<kw name="Log To Console" owner="BuiltIn" type="SETUP">
+<arg>login to application</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-12-24T14:59:39.228263" elapsed="0.000298"/>
 </kw>
-<arg>${username}</arg>
-<status status="PASS" start="2025-12-24T13:35:46.829190" elapsed="0.200059"/>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Test 3</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-12-24T14:59:39.229070" elapsed="0.000500"/>
 </kw>
-<kw name="Enter Password" owner="18_login_resourses">
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-12-24T13:35:47.035494" level="INFO">Typing text '123pwd' into text field 'xpath://input[@id='Password']'.</msg>
-<arg>xpath://input[@id='Password']</arg>
-<arg>@{password1}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-12-24T13:35:47.031709" elapsed="0.154025"/>
+<kw name="Log To Console" owner="BuiltIn" type="TEARDOWN">
+<arg>logout from application</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-12-24T14:59:39.230260" elapsed="0.000446"/>
 </kw>
-<arg>${password}</arg>
-<status status="PASS" start="2025-12-24T13:35:47.029989" elapsed="0.156366"/>
-</kw>
-<kw name="click login" owner="18_login_resourses">
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-12-24T13:35:47.251986" level="INFO">Clicking element 'xpath://button[normalize-space()='Log in']'.</msg>
-<arg>xpath://button[normalize-space()='Log in']</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-12-24T13:35:47.189801" elapsed="0.629359"/>
-</kw>
-<status status="PASS" start="2025-12-24T13:35:47.188770" elapsed="0.630995"/>
-</kw>
-<kw name="Dashboard should be visible" owner="18_login_resourses">
-<kw name="Page Should Contain" owner="SeleniumLibrary">
-<msg time="2025-12-24T13:35:48.326813" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-13.png"&gt;&lt;img src="selenium-screenshot-13.png" width="800px"&gt;&lt;/a&gt;</msg>
-<msg time="2025-12-24T13:35:48.327836" level="FAIL">Page should have contained text 'Dashboard' but did not.</msg>
-<arg>Dashboard</arg>
-<doc>Verifies that current page contains ``text``.</doc>
-<status status="FAIL" start="2025-12-24T13:35:47.952707" elapsed="0.382375">Page should have contained text 'Dashboard' but did not.</status>
-</kw>
-<status status="FAIL" start="2025-12-24T13:35:47.827128" elapsed="0.508385">Page should have contained text 'Dashboard' but did not.</status>
-</kw>
-<arg>username=ad123@gmail.com</arg>
-<arg>password=123pwd</arg>
-<status status="FAIL" start="2025-12-24T13:35:46.800497" elapsed="1.535265">Page should have contained text 'Dashboard' but did not.</status>
-</kw>
-<status status="FAIL" start="2025-12-24T13:35:46.768217" elapsed="1.685327">Page should have contained text 'Dashboard' but did not.</status>
+<status status="PASS" start="2025-12-24T14:59:39.227706" elapsed="0.003342"/>
 </test>
-<status status="FAIL" start="2025-12-24T13:35:39.752235" elapsed="9.139571"/>
+<kw name="Log To Console" owner="BuiltIn" type="TEARDOWN">
+<arg>closing browser</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-12-24T14:59:39.231887" elapsed="0.000509"/>
+</kw>
+<status status="PASS" start="2025-12-24T14:59:39.183905" elapsed="0.048686"/>
 </suite>
 <statistics>
 <total>
-<stat pass="0" fail="3" skip="0">All Tests</stat>
+<stat pass="3" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat name="18 DataDriven Test2" id="s1" pass="0" fail="3" skip="0">18 DataDriven Test2</stat>
+<stat name="21 SetupandTeardown" id="s1" pass="3" fail="0" skip="0">21 SetupandTeardown</stat>
 </suite>
 </statistics>
 <errors>
-<msg time="2025-12-24T13:35:40.383079" level="WARN">The chromedriver version (142.0.7444.3) detected in PATH at C:\Users\AD06441\AppData\Local\Programs\Python\Python313\Scripts\chromedriver.exe might not be compatible with the detected chrome version (143.0.7499.170); currently, chromedriver 143.0.7499.169 is recommended for chrome 143.*, so it is advised to delete the driver in PATH and retry</msg>
 </errors>
 </robot>
