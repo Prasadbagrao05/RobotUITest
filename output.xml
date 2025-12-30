@@ -1,203 +1,98 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.3.2 (Python 3.13.7 on win32)" generated="2025-12-30T11:54:30.163243" rpa="false" schemaversion="5">
-<suite id="s1" name="POMTestCases" source="C:\Automation workspace\Tests\Test Suit\RobotUITest\POMTestCases">
-<suite id="s1-s1" name="Login Test" source="C:\Automation workspace\Tests\Test Suit\RobotUITest\POMTestCases\Login Test.robot">
-<test id="s1-s1-t1" name="TC_01" line="13">
-<kw name="open my browser" owner="Loginkeywords">
+<robot generator="Robot 7.3.2 (Python 3.13.7 on win32)" generated="2025-12-30T12:06:02.553403" rpa="false" schemaversion="5">
+<suite id="s1" name="03 Inputbox" source="c:\Automation workspace\Tests\Test Suit\RobotUITest\Test Cases\03_Inputbox.robot">
+<test id="s1-t1" name="TC_Input Box" line="9">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2025-12-30T11:54:30.556305" level="INFO">Opening browser 'chrome' to base url 'https://demowebshop.tricentis.com/'.</msg>
-<msg time="2025-12-30T11:54:30.746267" level="WARN">The chromedriver version (142.0.7444.3) detected in PATH at C:\Users\AD06441\AppData\Local\Programs\Python\Python313\Scripts\chromedriver.exe might not be compatible with the detected chrome version (143.0.7499.170); currently, chromedriver 143.0.7499.169 is recommended for chrome 143.*, so it is advised to delete the driver in PATH and retry</msg>
-<arg>${siteurl}</arg>
-<arg>${browsername}</arg>
+<msg time="2025-12-30T12:06:02.862538" level="INFO">Opening browser 'headlesschrome' to base url 'https://demo.nopcommerce.com/'.</msg>
+<msg time="2025-12-30T12:06:03.148170" level="WARN">The chromedriver version (142.0.7444.3) detected in PATH at C:\Users\AD06441\AppData\Local\Programs\Python\Python313\Scripts\chromedriver.exe might not be compatible with the detected chrome version (143.0.7499.170); currently, chromedriver 143.0.7499.169 is recommended for chrome 143.*, so it is advised to delete the driver in PATH and retry</msg>
+<arg>${url}</arg>
+<arg>${browser}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2025-12-30T11:54:30.556021" elapsed="5.328533"/>
+<status status="PASS" start="2025-12-30T12:06:02.861941" elapsed="4.091436"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2025-12-30T11:54:35.885359" elapsed="0.052758"/>
+<status status="PASS" start="2025-12-30T12:06:06.954607" elapsed="0.139947"/>
 </kw>
-<arg>${siteurl}</arg>
-<arg>${browsername}</arg>
-<status status="PASS" start="2025-12-30T11:54:30.555157" elapsed="5.383160"/>
-</kw>
-<kw name="click on login link" owner="Loginkeywords">
-<kw name="Click Link" owner="SeleniumLibrary">
-<msg time="2025-12-30T11:54:35.940451" level="INFO">Clicking link 'xpath://a[normalize-space()='Log in']'.</msg>
-<arg>${txt_loginlink}</arg>
-<doc>Clicks a link identified by ``locator``.</doc>
-<status status="PASS" start="2025-12-30T11:54:35.939773" elapsed="0.717509"/>
-</kw>
-<status status="PASS" start="2025-12-30T11:54:35.939244" elapsed="0.718326"/>
-</kw>
-<kw name="enter user name" owner="Loginkeywords">
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-12-30T11:54:36.659162" level="INFO">Typing text 'malefemale123@gmail.com' into text field 'name:Email'.</msg>
-<arg>${txt_loginUsername}</arg>
-<arg>${username}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-12-30T11:54:36.658812" elapsed="0.161988"/>
-</kw>
-<arg>${username}</arg>
-<status status="PASS" start="2025-12-30T11:54:36.658244" elapsed="0.162936"/>
-</kw>
-<kw name="enter password" owner="Loginkeywords">
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-12-30T11:54:36.823095" level="INFO">Typing text 'male@123' into text field 'name:Password'.</msg>
-<arg>${txt_loginpassword}</arg>
-<arg>${password}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-12-30T11:54:36.822687" elapsed="0.137741"/>
-</kw>
-<arg>${password}</arg>
-<status status="PASS" start="2025-12-30T11:54:36.822034" elapsed="0.138597"/>
-</kw>
-<kw name="click login button" owner="Loginkeywords">
-<kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2025-12-30T11:54:36.961908" level="INFO">Clicking button 'xpath://input[@value='Log in']'.</msg>
-<arg>${btn_login}</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2025-12-30T11:54:36.961638" elapsed="0.949694"/>
-</kw>
-<status status="PASS" start="2025-12-30T11:54:36.961217" elapsed="0.950252"/>
+<kw name="Title Should Be" owner="SeleniumLibrary">
+<msg time="2025-12-30T12:06:07.315305" level="INFO">Page title is 'nopCommerce demo store. Home page title'.</msg>
+<arg>nopCommerce demo store. Home page title</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<status status="PASS" start="2025-12-30T12:06:07.096563" elapsed="0.219053"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2025-12-30T11:54:40.942826" level="INFO">Slept 3 seconds.</msg>
+<msg time="2025-12-30T12:06:10.317331" level="INFO">Slept 3 seconds.</msg>
 <arg>3</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-12-30T11:54:37.942200" elapsed="3.000937"/>
+<status status="PASS" start="2025-12-30T12:06:07.316215" elapsed="3.001716"/>
 </kw>
-<kw name="verify login successful" owner="Loginkeywords">
-<kw name="Page Should Contain" owner="SeleniumLibrary">
-<msg time="2025-12-30T11:54:41.051443" level="INFO">Current page contains text 'Welcome to our store'.</msg>
-<arg>Welcome to our store</arg>
-<doc>Verifies that current page contains ``text``.</doc>
-<status status="PASS" start="2025-12-30T11:54:40.953109" elapsed="0.098499"/>
+<kw name="Click Link" owner="SeleniumLibrary">
+<msg time="2025-12-30T12:06:10.319655" level="INFO">Clicking link 'xpath://a[normalize-space()='Log in']'.</msg>
+<arg>xpath://a[normalize-space()='Log in']</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="PASS" start="2025-12-30T12:06:10.318935" elapsed="0.612958"/>
 </kw>
-<status status="PASS" start="2025-12-30T11:54:40.952167" elapsed="0.099591"/>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-12-30T12:06:10.933183" level="INFO">${mail} = xpath://input[@id='Email']</msg>
+<var>${mail}</var>
+<arg>xpath://input[@id='Email']</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-12-30T12:06:10.932629" elapsed="0.000777"/>
 </kw>
-<kw name="close my browser" owner="Loginkeywords">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-12-30T12:06:11.190814" level="INFO">Element 'xpath://input[@id='Email']' is displayed.</msg>
+<arg>${mail}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-12-30T12:06:10.935211" elapsed="0.255902"/>
+</kw>
+<kw name="Element Should Be Enabled" owner="SeleniumLibrary">
+<arg>${mail}</arg>
+<doc>Verifies that element identified by ``locator`` is enabled.</doc>
+<status status="PASS" start="2025-12-30T12:06:11.192279" elapsed="0.026802"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-12-30T12:06:11.220320" level="INFO">Typing text 'Prasad.bagrao@xyz.com' into text field 'xpath://input[@id='Email']'.</msg>
+<arg>${mail}</arg>
+<arg>Prasad.bagrao@xyz.com</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-12-30T12:06:11.219757" elapsed="0.120626"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-12-30T12:06:16.341804" level="INFO">Slept 5 seconds.</msg>
+<arg>5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-12-30T12:06:11.341071" elapsed="5.002452"/>
+</kw>
+<kw name="Clear Element Text" owner="SeleniumLibrary">
+<arg>${mail}</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="PASS" start="2025-12-30T12:06:16.348444" elapsed="0.070873"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-12-30T12:06:19.421313" level="INFO">Slept 3 seconds.</msg>
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-12-30T12:06:16.420105" elapsed="3.001809"/>
+</kw>
 <kw name="Close Browser" owner="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2025-12-30T11:54:41.059555" elapsed="4.750523"/>
+<status status="PASS" start="2025-12-30T12:06:19.423168" elapsed="27.654139"/>
 </kw>
-<status status="PASS" start="2025-12-30T11:54:41.056494" elapsed="4.753924"/>
-</kw>
-<status status="PASS" start="2025-12-30T11:54:30.554288" elapsed="15.258595"/>
+<status status="PASS" start="2025-12-30T12:06:02.860527" elapsed="44.217655"/>
 </test>
-<status status="PASS" start="2025-12-30T11:54:30.201890" elapsed="15.612978"/>
-</suite>
-<suite id="s1-s2" name="Register Test" source="C:\Automation workspace\Tests\Test Suit\RobotUITest\POMTestCases\Register Test.robot">
-<test id="s1-s2-t1" name="Test Cases" line="16">
-<kw name="open my browser" owner="Registrationkeywords">
-<kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2025-12-30T11:54:45.954676" level="INFO">Opening browser 'chrome' to base url 'https://demowebshop.tricentis.com/'.</msg>
-<msg time="2025-12-30T11:54:46.264517" level="WARN">The chromedriver version (142.0.7444.3) detected in PATH at C:\Users\AD06441\AppData\Local\Programs\Python\Python313\Scripts\chromedriver.exe might not be compatible with the detected chrome version (143.0.7499.170); currently, chromedriver 143.0.7499.169 is recommended for chrome 143.*, so it is advised to delete the driver in PATH and retry</msg>
-<arg>${url}</arg>
-<arg>${browser}</arg>
-<doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2025-12-30T11:54:45.954016" elapsed="5.054130"/>
-</kw>
-<kw name="Maximize Browser Window" owner="SeleniumLibrary">
-<doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2025-12-30T11:54:51.008458" elapsed="0.041948"/>
-</kw>
-<arg>${url}</arg>
-<arg>${browser}</arg>
-<status status="PASS" start="2025-12-30T11:54:45.951919" elapsed="5.098750"/>
-</kw>
-<kw name="click registration link" owner="Registrationkeywords">
-<kw name="Click Link" owner="SeleniumLibrary">
-<msg time="2025-12-30T11:54:51.053752" level="INFO">Clicking link 'xpath://a[normalize-space()='Register']'.</msg>
-<arg>${reglink}</arg>
-<doc>Clicks a link identified by ``locator``.</doc>
-<status status="PASS" start="2025-12-30T11:54:51.053302" elapsed="0.641640"/>
-</kw>
-<status status="PASS" start="2025-12-30T11:54:51.052735" elapsed="0.642806"/>
-</kw>
-<kw name="Enter First name" owner="Registrationkeywords">
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-12-30T11:54:51.700647" level="INFO">Typing text 'Voldo' into text field 'name:FirstName'.</msg>
-<arg>${fname}</arg>
-<arg>${firstname}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-12-30T11:54:51.698403" elapsed="0.159608"/>
-</kw>
-<arg>${firstname}</arg>
-<status status="PASS" start="2025-12-30T11:54:51.696947" elapsed="0.162141"/>
-</kw>
-<kw name="Enter Last name" owner="Registrationkeywords">
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-12-30T11:54:51.860681" level="INFO">Typing text 'Voldo' into text field 'name:LastName'.</msg>
-<arg>${lname}</arg>
-<arg>${lastname}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-12-30T11:54:51.860277" elapsed="0.105093"/>
-</kw>
-<arg>${lastname}</arg>
-<status status="PASS" start="2025-12-30T11:54:51.859749" elapsed="0.105856"/>
-</kw>
-<kw name="Enter emailid" owner="Registrationkeywords">
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-12-30T11:54:51.966773" level="INFO">Typing text 'voldovoldo@gmail.com' into text field 'name:Email'.</msg>
-<arg>${email}</arg>
-<arg>${emailid}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-12-30T11:54:51.966510" elapsed="0.113302"/>
-</kw>
-<arg>${emailid}</arg>
-<status status="PASS" start="2025-12-30T11:54:51.966073" elapsed="0.114363"/>
-</kw>
-<kw name="Enter Password" owner="Registrationkeywords">
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-12-30T11:54:52.083809" level="INFO">Typing text 'voldovoldo@123' into text field 'name:Password'.</msg>
-<arg>${pwd}</arg>
-<arg>${password}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-12-30T11:54:52.083386" elapsed="0.092274"/>
-</kw>
-<arg>${password}</arg>
-<status status="PASS" start="2025-12-30T11:54:52.080983" elapsed="0.094807"/>
-</kw>
-<kw name="Enter Confirm Password" owner="Registrationkeywords">
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-12-30T11:54:52.176862" level="INFO">Typing text 'voldovoldo@123' into text field 'name:ConfirmPassword'.</msg>
-<arg>${cnfpwd}</arg>
-<arg>${confirmpassword}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-12-30T11:54:52.176651" elapsed="0.079272"/>
-</kw>
-<arg>${confirmpassword}</arg>
-<status status="PASS" start="2025-12-30T11:54:52.176269" elapsed="0.079785"/>
-</kw>
-<kw name="Click on Register button" owner="Registrationkeywords">
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-12-30T11:54:52.256937" level="INFO">Clicking element 'name:register-button'.</msg>
-<arg>${button_register}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-12-30T11:54:52.256727" elapsed="0.646635"/>
-</kw>
-<status status="PASS" start="2025-12-30T11:54:52.256414" elapsed="0.647165"/>
-</kw>
-<status status="PASS" start="2025-12-30T11:54:45.941357" elapsed="6.963388"/>
-</test>
-<status status="PASS" start="2025-12-30T11:54:45.824781" elapsed="7.081979"/>
-</suite>
-<status status="PASS" start="2025-12-30T11:54:30.165282" elapsed="22.742575"/>
+<status status="PASS" start="2025-12-30T12:06:02.559877" elapsed="44.522549"/>
 </suite>
 <statistics>
 <total>
-<stat pass="2" fail="0" skip="0">All Tests</stat>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat name="POMTestCases" id="s1" pass="2" fail="0" skip="0">POMTestCases</stat>
-<stat name="Login Test" id="s1-s1" pass="1" fail="0" skip="0">POMTestCases.Login Test</stat>
-<stat name="Register Test" id="s1-s2" pass="1" fail="0" skip="0">POMTestCases.Register Test</stat>
+<stat name="03 Inputbox" id="s1" pass="1" fail="0" skip="0">03 Inputbox</stat>
 </suite>
 </statistics>
 <errors>
-<msg time="2025-12-30T11:54:30.746267" level="WARN">The chromedriver version (142.0.7444.3) detected in PATH at C:\Users\AD06441\AppData\Local\Programs\Python\Python313\Scripts\chromedriver.exe might not be compatible with the detected chrome version (143.0.7499.170); currently, chromedriver 143.0.7499.169 is recommended for chrome 143.*, so it is advised to delete the driver in PATH and retry</msg>
-<msg time="2025-12-30T11:54:46.264517" level="WARN">The chromedriver version (142.0.7444.3) detected in PATH at C:\Users\AD06441\AppData\Local\Programs\Python\Python313\Scripts\chromedriver.exe might not be compatible with the detected chrome version (143.0.7499.170); currently, chromedriver 143.0.7499.169 is recommended for chrome 143.*, so it is advised to delete the driver in PATH and retry</msg>
+<msg time="2025-12-30T12:06:03.148170" level="WARN">The chromedriver version (142.0.7444.3) detected in PATH at C:\Users\AD06441\AppData\Local\Programs\Python\Python313\Scripts\chromedriver.exe might not be compatible with the detected chrome version (143.0.7499.170); currently, chromedriver 143.0.7499.169 is recommended for chrome 143.*, so it is advised to delete the driver in PATH and retry</msg>
 </errors>
 </robot>
